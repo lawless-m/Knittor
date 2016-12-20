@@ -1,10 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<script>
-alert("hi")
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Knittor</title>
+<script type="text/javascript" src="knittor.js">
 </script>
 </head>
-<body>
-hi
+
+<body onload="clear()">
+
+<p>
+<input type="text" name="stdin" id="stdin" onkeypress="cntclick()">
+<input type="text" name="counter" id="counter" disabled value="0">
+<input type="text" name="nextst" id="nextst" disabled value="">
+</p>
+
+<p><input type="text" name="patt" id="patt" value="K"><input type="text" name="ptimes" id="ptimes" value="1"><input type="button" name="bPatt" value="Add Pattern" onclick="addPatt(document.getElementById('patt').value.split(' '), parseInt(document.getElementById('ptimes').value));"></p>
+<p><input type="text" name="co" id="co" value="0"><input type="button" name="CO" value="Cast On" onclick="castOn(parseInt(document.getElementById('co').value));"></p>
+
+<p><input type="button" name="reset" value="Reset" onclick="resetAll()"></p>
+
+
 </body>
 </html>
+
